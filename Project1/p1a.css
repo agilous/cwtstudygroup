@@ -1,0 +1,35 @@
+table {
+  border-spacing: 0px;
+  font: normal 13px Tahoma;
+}
+
+th {
+  background-color: #565F7D;
+  color: #FFF;
+  font-weight: bold;
+  text-align: left;
+}
+
+tr:nth-child(odd) {
+  background-color: #D7DAE0;
+}
+
+tr:nth-child(even) {
+  background-color: #EAEBEF;
+}
+
+tr:nth-child(6) {
+  display: none;
+}
+
+th, td {
+  padding: 5px 10px 5px 10px;
+}
+
+td {
+  border-top: 1px solid #FFF;
+}
+
+td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+  text-align: center;
+}
