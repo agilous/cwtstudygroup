@@ -13,3 +13,15 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Vendor Everything
+/bin/
+/vendor/ruby/
+
+# The .env file is evironment specific
+.env
+
+.rvmrc
+.ruby-version
+log/*yaml
+/config/database.yml
