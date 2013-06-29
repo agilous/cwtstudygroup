@@ -11,6 +11,6 @@ class State
                 Wisconsin Wyoming }
 
   def self.filter(string)
-    @states.select { |state| /#{string}/ =~ state }
+    @states.select { |state| /#{string}/i =~ state }
   end
 end

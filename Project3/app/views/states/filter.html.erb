@@ -1,0 +1,14 @@
+<% if @matching_states &&@matching_states.count > 0 -%>
+  <p>The states listed below contain the substring &ldquo;<%= @substring %>&rdquo;.</p>
+    <ol>
+    <% @matching_states.each do |matching_state| -%>
+      <li><%= matching_state %></li>
+    <% end -%>
+    </ol>
+<% else -%>
+  <% if @substring -%>
+    <p>Sorry, no states matched the substring &ldquo;<%= @substring %>&rdquo;.</p>
+  <% else -%>
+    <p>Please supply a query parameter in the URL like this one:<br /><%= link_to "/state/filter?substring=oh", state_filter_path(substring: "oh") %></p>
+  <% end -%>
+<% end -%>
