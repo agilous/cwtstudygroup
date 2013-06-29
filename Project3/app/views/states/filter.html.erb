@@ -1,4 +1,4 @@
-<% if @matching_states &&@matching_states.count > 0 -%>
+<% if @matching_states && @matching_states.count > 0 -%>
   <p>The states listed below contain the substring &ldquo;<%= @substring %>&rdquo;.</p>
     <ol>
     <% @matching_states.each do |matching_state| -%>
