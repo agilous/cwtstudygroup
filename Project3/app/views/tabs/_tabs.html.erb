@@ -1,0 +1,5 @@
+<div>
+<% tabs.each do |tab| -%>
+  <span<%= selected == tab[:label] ? " class=selected" : "" %>><a href="<%= tab[:url] %>"><%= tab[:label] %></a></span>
+<% end -%>
+</div>

@@ -13,6 +13,7 @@
  */
 
 body {
+  padding: 10px;
   font: normal 13px Tahoma;
 }
 
@@ -25,4 +26,37 @@ body {
 
 .header__big {
   font-size: 1.2em;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #CC6600;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+span {
+  background: url('left.gif') top left no-repeat, url('right.gif') top right no-repeat, url('mid.gif') repeat-x;
+  padding: 4px 6px 4px 6px;
+}
+
+span:hover {
+  background: #FFF;
+  border-top: 1px solid #C1C1C1;
+  border-right: 1px solid #C1C1C1;
+  border-bottom: 1px solid #FFF;
+  border-left: 1px solid #C1C1C1;
+  font-weight: bold;
+}
+
+div {
+  padding-top: .25in;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #C1C1C1;
 }
