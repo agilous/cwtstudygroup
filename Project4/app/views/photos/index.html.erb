@@ -8,7 +8,7 @@
       <% photo.comments.each do |comment| -%>
         <div>
           <%= comment.comment %><br />
-          By: <%= "#{comment.user.first_name} #{comment.user.last_name}" %><br />
+          By: <%= link_to "#{comment.user.first_name} #{comment.user.last_name}", photos_path(comment.user) %><br />
           Posted: <%= comment.date_time.localtime.strftime('%l:%M:%S %p on %B %e, %Y') %>
         </div>
         <hr />
