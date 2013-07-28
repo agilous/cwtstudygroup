@@ -1,0 +1,23 @@
+<h2><%= "#{@user.first_name} #{@user.last_name}" %></h2>
+<% if @user.photos.count > 0 -%>
+  <% @user.photos.each do |photo| -%>
+    <div><%= image_tag(photo.file_name) %></div>
+    <div>Created: <%= photo.date_time.localtime.strftime('%I:%M:%S %p on %B %e, %Y') %></div>
+    <% if photo.comments.count > 0 -%>
+      <div>Comments:</div>
+      <% photo.comments.each do |comment| -%>
+        <div>
+          <%= comment.comment %><br />
+          By: <%= "#{comment.user.first_name} #{comment.user.last_name}" %><br />
+          Posted: <%= comment.date_time.localtime.strftime('%l:%M:%S %p on %B %e, %Y') %>
+        </div>
+        <hr />
+      <% end -%>
+    <% else -%>
+      <div>No comments (yet!)</div>
+      <hr />
+    <% end -%>
+  <% end -%>
+<% end -%>
+
+<div><%= link_to "Back", root_path %></div>
